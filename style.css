@@ -1,0 +1,130 @@
+
+main {
+    display: flex;
+  }
+#wrap{
+    min-width: 600px;
+    }
+    body { 
+        margin: 0;   /* Remove body margins */
+        overflow-x: hidden;
+            height: 100%;
+    max-height: 100%;
+    width: 100%;
+    }
+     section{
+        position:relative;
+
+        height: 100vh;
+        background-image: url("./img/BG.PNG");
+        background-repeat:no-repeat;
+        background-size:cover;
+        
+    }
+    p{
+        position:fixed;
+    }
+    #mapContainer.fixed { position: fixed; }
+    .Foreground_klenek{
+        position:absolute;
+        right: 92px;
+        top: 465px;
+        height: 24.5vh;
+        z-index: 10;
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+
+    /*.Foreground_klenek:hover {
+        -webkit-filter: drop-shadow(2px 1px 0 black)
+                    drop-shadow(-1px -1px 0 black);
+                filter: drop-shadow(2px 10px 0 black) 
+                        drop-shadow(-1px -1px 0 black);
+    }*/
+    .glow{
+    position:fixed;
+    width: 40px;
+    height: 60px;
+    margin-left:450px;
+    margin-top:520px;
+    padding-left: 900px;
+    border-radius: 10%;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow:
+        0 0 40px 10px #fff,  /* inner white */
+        0 0 50px 20px rgb(255, 255, 255), /* middle magenta */
+        0 0 60px 30px #0ff; /* outer cyan */
+    }
+    .blink {
+        position:fixed;
+        animation: flicker 3s linear infinite;
+            }
+
+            @keyframes flicker {
+        0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+            text-shadow: none;
+        opacity: .99;
+            
+        }
+        20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+            opacity: 0.4;
+        }}
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins",sans-serif;  
+    }
+    header{
+        position: relative;
+        left:0;
+        top:0;
+        width: 1005;
+        height: 80px;
+    }
+    header h4{
+        position: absolute;
+        left: 100%;
+        bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .intro{
+        position: fixed;
+        z-index: 11;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*background-color: #161616;*/
+        background-image:url("./img/epic-rick-and-morty.gif");
+        background-repeat:no-repeat;
+        background-size:cover;
+        transition: 1s;
+    }
+    .logo-header{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color:#ffffff;
+    }
+    .logo{
+        position: relative;
+        display: inline-block;
+        bottom: -20px;
+        opacity: 0;
+    }
+    .logo.active{
+        bottom: 0;
+        opacity: 1;
+        transition: ease-in-out 0.5s;
+    }
+
+    .logo.fade{
+        bottom: 150px;
+        opacity: 0;
+        transition: ease-in-out 0.5s;
+    }
