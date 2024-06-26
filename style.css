@@ -9,9 +9,9 @@ html,body {
     overflow-x: hidden;
     width: 100%;
 }
-section{
+body{
 position:relative;
-height: 100vh;
+height: 100%;
 background-image: url("./img/BG.PNG");
 background-repeat:no-repeat;
 background-size:cover;
@@ -24,9 +24,9 @@ p{
 .Foreground_klenek{
     display: inline-block;
     opacity:1;
-    margin-top:57.4vh;
-    margin-left: 51.4vh;
-    height: 24.13vh;
+    margin-top:54.6vh;
+    margin-left: 50.6vh;
+    height: 23.4vh;
     z-index: 10;
     
     background-repeat:no-repeat;
